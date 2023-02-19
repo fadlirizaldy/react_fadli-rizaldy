@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Page</title>
+  </head>
+  <body>
+    <h1>Create Account</h1>
+    <h2>Detail Form</h2>
+    <form>
+      <div class="userData">
+        <label for="user-first-name">First Name :</label><br />
+        <input type="text" name="firstName" required minlength="6" maxlength="50" /><br /><br />
+        <label for="user-last-name">Last Name :</label><br />
+        <input list="users" name="lastName" required /><br /><br />
+        <label for="">Username :</label><br />
+        <input list="users" name="listProducts" required /><br /><br />
+        <label for="product-category">Email :</label><br />
+        <input list="users" name="listProducts" required /><br /><br />
+      </div>
+      <div class="gender">
+        <label for="choose-gender">Gender :</label><br />
+        <input type="radio" name="gender" id="maleGender" value="male" required />
+        <label for="maleGender">Male</label><br />
+        <input type="radio" name="gender" id="femaleGender" value="female" required />
+        <label for="femaleGender">Female</label><br />
+        <input type="radio" name="gender" id="otherGender" value="other" required />
+        <label for="otherGender">Other</label>
+      </div>
+      <div class="userAddress">
+        <input list="address" name="address1" required /><br /><br />
+        <label>Address :</label><br />
+        <input list="address" name="address2" /><br /><br />
+        <label>Address 2 :</label><br />
+      </div>
+      <br />
+      <div class="nasionality">
+        <label>Nasionality :</label><br />
+        <label for="nasionality">Nasionality</label><br />
+        <input list="nasionalities" name="nasionalities" required />
+        <datalist id="nasionalities">
+          <option value="Asian"></option>
+          <option value="American"></option>
+          <option value="Indian"></option>
+        </datalist>
+        <br />
+        <br />
+        <div class="languageForm">
+          <label for="language">Language Spoken :</label><br />
+          <input type="checkbox" name="language" id="indoLang" value="bahasaIndonesia" required />
+          <label for="indoLang">Bahasa Indonesia</label><br />
+          <input type="checkbox" name="language" id="englishLang" value="english" required />
+          <label for="englishLang">English</label><br />
+          <input type="checkbox" name="language" id="otherLang" value="other" required />
+          <label for="otherLang">Other</label>
+        </div>
+      </div>
+      <br />
+      <input type="submit" value="Create Account" />
+    </form>
+  </body>
+</html>

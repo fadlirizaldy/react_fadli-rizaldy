@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  color: black;
+}
+.header {
+  font-family: sans-serif;
+  font-weight: 100;
+  padding: 15px;
+}
+.content {
+  margin-left: 20px;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.motto {
+  color: #808080;
+  font-size: 1rem;
+  margin: 10px 0 40px 0;
+}
+a {
+  padding: 10px 30px;
+  width: 150px;
+  text-decoration: none;
+  background-color: #ffffff;
+}
+a:nth-child(1) {
+  border: 2px solid;
+  margin-right: 20px;
+}
+a:nth-child(2) {
+  background-color: white;
+  border: none;
+}
+a:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 500px;
+  margin-top: 100px;
+}
+
+.newsLetter {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.newsLetter > h2 {
+  margin-bottom: 15px;
+}
+
+.newsLetter > p {
+  margin-bottom: 10px;
+}
+
+.newsLetterInput {
+  width: 500px;
+  height: 25px;
+  border: 1px solid;
+}
+
+.newsLetter > input[type="submit"] {
+  margin-top: 10px;
+  padding: 10px 20px;
+  width: 120px;
+  border: 1px solid;
+  background-color: #ffffff;
+}
+
+.newsLetter > input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+footer {
+  padding: 15px 30px;
+}

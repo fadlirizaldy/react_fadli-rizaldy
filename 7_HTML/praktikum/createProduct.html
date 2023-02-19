@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+  </head>
+  <body>
+    <h1>Create Product</h1>
+    <h2>Detail Product</h2>
+    <form>
+      <label for="product-name">Product Name :</label><br />
+      <input type="text" name="productName" required minlength="6" maxlength="50" /><br /><br />
+      <label for="product-category">Product Category :</label><br />
+      <input list="products" name="listProducts" required />
+      <datalist id="products">
+        <option value="Handphone"></option>
+        <option value="Computer"></option>
+        <option value="Radio"></option>
+      </datalist>
+      <br /><br />
+      <label for="product-Freshness">Product Freshness :</label><br />
+      <div class="productFreshness">
+        <input type="radio" name="freshness" id="brandNew" value="brandNew" required />
+        <label for="brandNew">Brand New</label><br />
+        <input type="radio" name="freshness" id="secondHank" value="secondHank" required />
+        <label for="secondHank">Second Hank</label><br />
+        <input type="radio" name="freshness" id="refurbish" value="refurbish" required />
+        <label for="refurbish">Refurbished</label>
+      </div>
+      <div class="imageProduct">
+        <p>Image of Product <input type="file" name="imageFile" id="imageFile" required /></p>
+      </div>
+      <div class="formDescription">
+        <label for="desc">Additional Information</label><br />
+        <textarea id="formDesc" name="Descriptio " rows="4" cols="45" required></textarea><br />
+      </div>
+      <div class="productPrice">
+        <label for="prodcutPrice">Product Price :</label><br />
+        <input type="number" name="price" id="productPrice" placeholder="$100" required />
+      </div>
+      <br />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
