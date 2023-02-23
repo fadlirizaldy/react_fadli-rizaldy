@@ -4,7 +4,7 @@
 
 1. Bootstrap merupakan sebuah framework styling yang membantu front end developer dalam mengembangkan tampilan website. Bootstrap digunakan untuk mengatur berbagai warna, font, layout, dan lain-lain.
 
-2. Bootstrap dapat digunakan dengan menginstallnya atau dengan menggunakan starter template yang sudah disediakan. Selain CSS, Bootstrap juga menyediakan komponen Javascript yang dapat digunakan developer.
+2. Bootstrap dapat digunakan dengan menginstallnya atau dengan menggunakan starter template yang sudah disediakan. Selain CSS, Bootstrap juga menyediakan komponen Javascript dalam bentuk plugin jQuery yang dapat digunakan developer.
 
 3. Bootstrap digunakan dengan menghubungkan file CSS yang telah dibuat oleh Bootstrap dengan HTML kita. Bootstrap memanfaatkan class dalam stylingnya. Sebagai contoh:
 
