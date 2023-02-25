@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", "Open Sans", sans-serif;
+}
+
+.top-footer {
+  padding: 30px 40px;
+  background-color: #bad7e9;
+}
+
+.footer > .top-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer > .top-footer > * {
+  /* border: 1px solid black; */
+  padding: 10px;
+}
+
+.about-me p {
+  margin-top: 15px;
+  line-height: 25px;
+  font-family: "Open Sans";
+}
+
+.my-skill {
+  margin-left: 20px;
+}
+
+.my-skill ul,
+.contact-me ul {
+  margin-top: 15px;
+}
+
+.my-skill ul li,
+.contact-me ul li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  font-family: "Open Sans";
+}
+
+.contact-me > ul > li > img {
+  width: 1rem;
+}
+
+.social-media-icons {
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+  column-gap: 10px;
+  row-gap: 6px;
+  margin-top: 20px;
+}
+
+.social-media-icons > a {
+  width: 30px;
+  position: relative;
+}
+
+.social-media-icons > a:hover {
+  width: 120%;
+  transition: 0.2s ease-out;
+}
+
+.social-media-icons > a:active {
+  width: 90%;
+  transition: 0.2s ease-out;
+}
+
+/* Bottom Footer */
+.bottom-footer {
+  background-color: #2f58cd;
+  color: aliceblue;
+  padding: 20px 40px;
+  text-align: center;
+}
