@@ -26,16 +26,20 @@
   font-family: "Open Sans";
 }
 
-.my-skill {
+.about-me > h1 {
+  letter-spacing: 5px;
+}
+
+.services {
   margin-left: 20px;
 }
 
-.my-skill ul,
+.services ul,
 .contact-me ul {
   margin-top: 15px;
 }
 
-.my-skill ul li,
+.services ul li,
 .contact-me ul li {
   list-style-type: none;
   margin-bottom: 10px;
