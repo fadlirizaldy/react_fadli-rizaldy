@@ -1,0 +1,50 @@
+.company-name {
+  letter-spacing: 5px !important;
+  font-family: "Jost", "Open Sans", sans-serif !important;
+  font-size: 30px !important;
+}
+
+.container-bg {
+  background-color: #f5eaea !important;
+}
+
+.container {
+  height: 90vh !important;
+}
+
+.navbar-toggler {
+  margin-left: 90% !important;
+}
+
+.hero-left-side > h1 {
+  font-family: "Jost";
+}
+
+.button-custom {
+  border: 1px solid #537fe7;
+  width: 150px;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+.btn-CTA {
+  width: 150px;
+  background-color: #2f58cd !important;
+  color: #ffffff !important;
+  border-radius: 0 !important;
+  padding: 10px;
+  position: relative;
+  left: -5px;
+  top: -5px;
+}
+
+.btn-CTA:hover {
+  left: 0;
+  top: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-CTA:active {
+  transition: 0.2s ease-in-out;
+  background-color: #224cbf !important;
+}
