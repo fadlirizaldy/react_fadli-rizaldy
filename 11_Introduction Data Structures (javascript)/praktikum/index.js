@@ -138,9 +138,12 @@ const formValidation = (e) => {
     form.elements["productImage"].value = "";
     form.elements["productDesc"].value = "";
     form.elements["productPrice"].value = "";
+    productFreshness[0].checked = true;
 
     showData(data);
-    alert("Success Input Data!");
+    setTimeout(() => {
+      alert("Success Input Data!");
+    }, 100);
   }
 };
 
@@ -155,6 +158,10 @@ form.addEventListener("submit", (e) => {
 //Show all data to table
 const showData = (datas) => {
   tbody.innerHTML = "";
+  if (datas.length === 0) {
+    document.getElementById("alertSearch").innerHTML = "No Data";
+    return false;
+  }
   datas.forEach((data, idx) => {
     const row = document.createElement("tr");
     const numId = document.createElement("th");
@@ -179,14 +186,16 @@ const filterData = (data, keyword) => {
     document.getElementById("alertSearch").innerHTML = `<div class="alert alert-danger" role="alert">
         Do not found
       </div>`;
+
+    return false;
   }
+  document.getElementById("alertSearch").innerHTML = "";
   showData(dataFiltered);
 };
 
 // filter data based on keyword
 searchBtn.addEventListener("click", (e) => {
   if (searchInput.value === "") {
-    document.getElementById("alertSearch").innerHTML = "";
     showData(data);
     return false;
   }
