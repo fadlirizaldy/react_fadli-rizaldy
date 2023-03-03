@@ -3,6 +3,7 @@ const tbody = document.getElementById("tbody-product");
 const searchBtn = document.getElementById("searchButton");
 const searchInput = document.getElementById("searchInput");
 const deleteBtn = document.getElementById("deleteButton");
+const alertSearch = document.getElementById("alertSearch");
 
 // product form element
 const productName = document.getElementById("productName");
@@ -151,7 +152,6 @@ const formValidation = (e) => {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   formValidation(e);
-  document.getElementById("alertSearch").innerHTML = "";
   searchInput.value = "";
 });
 
@@ -159,9 +159,12 @@ form.addEventListener("submit", (e) => {
 const showData = (datas) => {
   tbody.innerHTML = "";
   if (datas.length === 0) {
-    document.getElementById("alertSearch").innerHTML = "No Data";
+    alertSearch.innerHTML = "No Data";
     return false;
+  } else {
+    alertSearch.innerHTML = "";
   }
+
   datas.forEach((data, idx) => {
     const row = document.createElement("tr");
     const numId = document.createElement("th");
@@ -183,13 +186,13 @@ const filterData = (data, keyword) => {
   const dataFiltered = data.filter((el) => el["productName"].includes(keyword));
   if (dataFiltered.length === 0) {
     tbody.innerHTML = "";
-    document.getElementById("alertSearch").innerHTML = `<div class="alert alert-danger" role="alert">
+    alertSearch.innerHTML = `<div class="alert alert-danger" role="alert">
         Do not found
       </div>`;
 
     return false;
   }
-  document.getElementById("alertSearch").innerHTML = "";
+  alertSearch.innerHTML = "";
   showData(dataFiltered);
 };
 
