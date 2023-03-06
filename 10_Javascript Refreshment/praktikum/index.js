@@ -20,6 +20,14 @@ const errorThrow = (message, elementInput, elementError) => {
   elementInput.classList.add("border", "border-danger");
 };
 
+
+// Enhance positif case jika semua isian field benar, maka hapus class style pada element input (supaya error message-nya hilang).
+const noErrorThrow = (elementInput, elementError) => {
+  elementError.innerText = '';
+  elementError.classList.remove("text-danger");
+  elementInput.classList.remove("border", "border-danger");
+};
+
 const arr = {};
 
 const radioValidation = () => {
@@ -38,6 +46,10 @@ const formValidation = (e) => {
   if (productName.value.length > 25) {
     e.preventDefault();
     errorThrow("Product Name must not exceed 25 characters.", productPrice, errorProduct);
+  } else {
+    // Contoh implementasi positif case jika input user sudah tervalidasi dengan benar (bisa diterapkan di semua validasi).
+    // Coba implementasi function noErrorThrow pada semua kondisi.
+    noErrorThrow(productPrice, errorProduct)
   }
 
   if (productName.value.match("[@/#{}]")) {
