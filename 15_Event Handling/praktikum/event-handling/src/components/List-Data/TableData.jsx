@@ -8,12 +8,6 @@ const TableData = ({ datas, setStateData }) => {
 
   let dataFiltered = datas.filter((data) => data.name.toLowerCase().includes(keywordSearch.toLowerCase()));
 
-  const [isDataFound, setIsDataFound] = useState(true);
-
-  if (dataFiltered.length < 0 && keywordSearch.length > 0) {
-    setIsDataFound((prev) => !prev);
-  }
-
   return (
     <div className="container m-5 py-2">
       <h2 style={{ textAlign: "center" }}>List Product</h2>
