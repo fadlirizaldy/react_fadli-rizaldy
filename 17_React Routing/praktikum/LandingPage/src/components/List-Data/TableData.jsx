@@ -26,10 +26,10 @@ const TableData = ({ datas, setStateData }) => {
           <tbody id="tbody-product">
             {keywordSearch.length > 1
               ? dataFiltered?.map((data, idx) => {
-                  return <RecordData no={data.no} name={data.name} category={data.category} freshness={data.freshness} desc={data.description} price={data.price} setStateData={setStateData} />;
+                  return <RecordData data={data} setStateData={setStateData} />;
                 })
               : datas?.map((data, idx) => {
-                  return <RecordData no={data.no} name={data.name} category={data.category} freshness={data.freshness} desc={data.description} price={data.price} setStateData={setStateData} />;
+                  return <RecordData data={data} setStateData={setStateData} />;
                 })}
           </tbody>
         </table>

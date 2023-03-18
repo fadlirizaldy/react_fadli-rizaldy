@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
-import Navbar from "../components/Navbar/Navbar";
 import Form from "../components/Form/Form";
 import TableData from "../components/List-Data/TableData";
-import Footer from "../components/Footer/Footer";
 
 const CreateProduct = () => {
   const tmpData = {
@@ -10,13 +8,13 @@ const CreateProduct = () => {
     name: "Xiaomi",
     category: "Handphone",
     image: "c:/graph.jpg",
-    freshness: "Fake News",
+    freshness: "Refurbished",
     description: "lorem ipsum dolor skododdle",
     price: "20000",
   };
   const tmpData2 = {
     no: crypto.randomUUID(),
-    name: "Sumsang",
+    name: "Samsong",
     category: "Laptop",
     image: "c:/topsang.jpg",
     freshness: "Brand New",
@@ -28,10 +26,8 @@ const CreateProduct = () => {
 
   return (
     <div className="createProduct">
-      <Navbar />
       <Form setStateData={setDataProd} />
       <TableData datas={dataProd} setStateData={setDataProd} />
-      <Footer />
     </div>
   );
 };

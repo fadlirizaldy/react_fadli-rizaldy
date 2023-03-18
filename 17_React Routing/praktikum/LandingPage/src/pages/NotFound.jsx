@@ -3,8 +3,7 @@ import Navbar from "../components/Navbar/Navbar";
 const NotFound = () => {
   return (
     <>
-      <Navbar />
-      <div class="container d-flex justify-content-center mt-3">
+      <div class="container d-flex justify-content-center mt-3 vh-100">
         <div class="row">
           <div class="col-md-12">
             <div class="error-template">

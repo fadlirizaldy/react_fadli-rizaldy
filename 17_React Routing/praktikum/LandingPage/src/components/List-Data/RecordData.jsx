@@ -1,21 +1,29 @@
 import DeleteRecordButton from "../Button/DeleteRecordButton";
 import EditRecordButton from "../Button/EditRecordButton";
+import { Link, useNavigate } from "react-router-dom";
 
-const RecordData = ({ no, name, category, freshness, price, setStateData }) => {
+const RecordData = ({ data, setStateData }) => {
+  const navigate = useNavigate();
+  const action = () => {
+    navigate(`/createProduct/detail/${data.no}`, {
+      state: { data },
+    });
+  };
+
   return (
     <>
-      <tr key={no}>
+      <tr key={data.no} onClick={action}>
         <th scope="row" className="w-25">
-          {no}
+          {data.no}
         </th>
-        <td>{name}</td>
-        <td>{category}</td>
-        <td>{freshness}</td>
-        <td>{price}</td>
+        <td>{data.name}</td>
+        <td>{data.category}</td>
+        <td>{data.freshness}</td>
+        <td>{data.price}</td>
         <td>
           <div className="container">
             <div className="row">
-              <DeleteRecordButton setStateData={setStateData} no={no} />
+              <DeleteRecordButton setStateData={setStateData} no={data.no} />
               <EditRecordButton />
             </div>
           </div>

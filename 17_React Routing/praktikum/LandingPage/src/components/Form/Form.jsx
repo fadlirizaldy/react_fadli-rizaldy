@@ -30,7 +30,7 @@ const Form = ({ setStateData }) => {
     }
 
     setStateData((prevData) => {
-      return [...prevData, { name: prodName, category, image: filePath, freshness, description, price }];
+      return [...prevData, { no: crypto.randomUUID(), name: prodName, category, image: filePath, freshness, description, price }];
     });
 
     alert("Success Submit");
