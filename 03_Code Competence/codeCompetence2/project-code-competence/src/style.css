@@ -1,0 +1,135 @@
+.company-name {
+  letter-spacing: 5px !important;
+  font-family: "Jost", "Open Sans", sans-serif !important;
+  font-size: 30px !important;
+}
+
+.container-bg {
+  background-color: #f5eaea !important;
+}
+
+.container {
+  height: 90vh !important;
+}
+
+.navbar-toggler {
+  margin-left: 90% !important;
+}
+
+.hero-left-side > h1 {
+  font-family: "Jost";
+}
+
+.button-custom {
+  border: 1px solid #537fe7;
+  width: 150px;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+
+.btn-CTA {
+  width: 150px;
+  background-color: #2f58cd !important;
+  color: #ffffff !important;
+  border-radius: 0 !important;
+  padding: 10px;
+  position: relative;
+  left: -5px;
+  top: -5px;
+}
+
+.btn-CTA:hover {
+  left: 0;
+  top: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.btn-CTA:active {
+  transition: 0.2s ease-in-out;
+  background-color: #224cbf !important;
+}
+
+.top-footer {
+  padding: 30px 40px;
+  background-color: #f5eaea;
+}
+
+.footer > .top-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer > .top-footer > * {
+  /* border: 1px solid black; */
+  padding: 10px;
+}
+
+.about-me p {
+  margin-top: 15px;
+  line-height: 25px;
+  font-family: "Open Sans";
+}
+
+.about-me > h1 {
+  letter-spacing: 5px;
+}
+
+.services {
+  margin-left: 20px;
+}
+
+.services ul,
+.contact-me ul {
+  margin-top: 15px;
+}
+
+.services ul li,
+.contact-me ul li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  font-family: "Open Sans";
+}
+
+.contact-me > ul > li > img {
+  width: 1rem;
+}
+
+.social-media-icons {
+  display: grid;
+  grid-template-columns: 30px 30px 30px;
+  column-gap: 10px;
+  row-gap: 6px;
+  margin-top: 20px;
+}
+
+.social-media-icons > a {
+  width: 30px;
+  position: relative;
+}
+
+.social-media-icons > a:hover {
+  width: 120%;
+  transition: 0.2s ease-out;
+}
+
+.social-media-icons > a:active {
+  width: 90%;
+  transition: 0.2s ease-out;
+}
+
+/* Bottom Footer */
+.top-footer {
+  background-color: #f1f6f5;
+}
+
+.bottom-footer {
+  background-color: #f0eccf;
+  color: black;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+/* About Page */
+.robotImage {
+  width: 200px;
+}
