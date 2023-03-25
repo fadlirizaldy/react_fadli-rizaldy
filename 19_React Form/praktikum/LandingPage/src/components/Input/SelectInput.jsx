@@ -12,7 +12,7 @@ const SelectInput = ({ setCategory, value, stateError }) => {
         <option>Laptop</option>
         <option>Computer</option>
       </select>
-      {stateError.isError ? <ErrorInput id={"errorCategory"} message={stateError.category} /> : ""}
+      {stateError.isError && value.length < 1 ? <ErrorInput id={"errorCategory"} message={stateError.category} /> : ""}
     </div>
   );
 };

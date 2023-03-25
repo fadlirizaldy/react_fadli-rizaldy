@@ -34,7 +34,7 @@ const CheckInput = ({ setFreshness, value, stateError }) => {
           </label>
         </div>
       </div>
-      {stateError.isError ? <ErrorInput id={"errorFreshness"} message={stateError.freshness} /> : ""}
+      {stateError.isError && value.length < 1 ? <ErrorInput id={"errorFreshness"} message={stateError.freshness} /> : ""}
     </div>
   );
 };

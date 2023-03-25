@@ -16,7 +16,7 @@ const InputPrice = ({ title, idError, setStateItem, value, stateError }) => {
         placeholder=""
         onChange={handleOnChange}
       />
-      {stateError.isError ? <ErrorInput id={idError} message={stateError.price} /> : ""}
+      {stateError.isError && (!/^[0-9]+$/.test(value) || value.length < 1) ? <ErrorInput id={idError} message={stateError.price} /> : ""}
     </div>
   );
 };

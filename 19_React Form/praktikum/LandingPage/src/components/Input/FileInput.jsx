@@ -13,7 +13,7 @@ const FileInput = ({ setFilePath, value, stateError }) => {
         className={`form-control-file border rounded ${stateError.isError && !/\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(value) ? "border-danger" : "border-primary"}`}
         style={{ width: "230px" }}
       />
-      {stateError.isError ? <ErrorInput id={"errorImage"} message={stateError.filepath} /> : ""}
+      {stateError.isError && !/\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(value) ? <ErrorInput id={"errorImage"} message={stateError.filepath} /> : ""}
     </div>
   );
 };

@@ -21,7 +21,7 @@ const Navbar = () => {
             <a className="nav-link btn btn-primary mx-2 text-white" aria-current="page" href="/">
               Home
             </a>
-            <a className="nav-link mx-2" href="/createProduct">
+            <a className="nav-link mx-2" href="/product">
               Product
             </a>
             <a className="nav-link mx-2" href="/pricing">

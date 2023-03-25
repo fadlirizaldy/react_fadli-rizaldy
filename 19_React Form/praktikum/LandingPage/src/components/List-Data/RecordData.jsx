@@ -5,8 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 const RecordData = ({ data, setStateData }) => {
   const navigate = useNavigate();
   const action = () => {
-    console.log(data);
-    navigate(`/createProduct/detail/${data.no}`, {
+    navigate(`/product/detail/${data.no}`, {
       state: { data },
     });
   };

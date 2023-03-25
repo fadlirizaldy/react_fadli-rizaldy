@@ -16,7 +16,7 @@ const InputName = ({ title, idError, setStateItem, value, stateError }) => {
         placeholder=""
         onChange={handleOnChange}
       />
-      {stateError.isError ? <ErrorInput id={idError} message={stateError.productName} /> : ""}
+      {stateError.isError && (!/^[A-Za-z0-9 ]*$/.test(value) || value.length < 1) ? <ErrorInput id={idError} message={stateError.productName} /> : ""}
       {value.length > 10 ? <ErrorInput id={idError} message={"Product Name should be 10 characters or less"} /> : ""}
     </div>
   );

@@ -13,7 +13,7 @@ const TextAreaInput = ({ setDescription, value, stateError }) => {
         value={value}
         onChange={({ target }) => setDescription(target.value)}
       ></textarea>
-      {stateError.isError ? <ErrorInput id={"errorDesc"} message={stateError.desc} /> : ""}
+      {stateError.isError && value.length < 1 ? <ErrorInput id={"errorDesc"} message={stateError.desc} /> : ""}
     </div>
   );
 };

@@ -5,6 +5,8 @@ import CreateProduct from "./../pages/CreateProduct";
 import Home from "./../pages/Home";
 import NotFound from "./../pages/NotFound";
 import ProductDetail from "../pages/ProductDetail";
+import LoginPage from "../pages/LoginPage";
+import PrivateRoute from "../components/privateRoute/PrivateRoute";
 
 const MainLayout = () => {
   return (
@@ -13,8 +15,11 @@ const MainLayout = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" exact Component={Home} />
-          <Route path="/createProduct" exact Component={CreateProduct} />
-          <Route path="/createProduct/detail/:id" exact Component={ProductDetail} />
+          <Route path="/login" exact Component={LoginPage} />
+          <Route path="/product" exact element={<PrivateRoute />}>
+            <Route path="/product" exact Component={CreateProduct} />
+            <Route path="/product/detail/:id" exact Component={ProductDetail} />
+          </Route>
           <Route path="*" Component={NotFound} />
         </Routes>
       </BrowserRouter>

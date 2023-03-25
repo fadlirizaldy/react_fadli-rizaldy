@@ -3,6 +3,7 @@ const DeleteRecordButton = ({ setStateData, no }) => {
     if (confirm("Are you sure want to delete this data?")) {
       setStateData((prevData) => prevData.filter((data) => data.no != no));
     }
+    e.stopPropagation();
   };
 
   return (
