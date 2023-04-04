@@ -16,13 +16,31 @@ const CheckInput = ({ setFreshness, value, stateError }) => {
       </label>
       <div className="mt-1">
         <div className="form-check">
-          <input id="brandNew" name="productFreshness" value="Brand New" type="radio" onChange={(e) => handleCheckValue(e)} className="form-check-input" checked={value === "Brand New"} />
+          <input
+            id="brandNew"
+            name="productFreshness"
+            data-testid="test-freshness1"
+            value="Brand New"
+            type="radio"
+            onChange={(e) => handleCheckValue(e)}
+            className="form-check-input"
+            checked={value === "Brand New"}
+          />
           <label className="form-check-label" htmlFor="brandNew">
             Brand New
           </label>
         </div>
         <div className="form-check">
-          <input id="secondHand" name="productFreshness" type="radio" value="Second Hand" onChange={(e) => handleCheckValue(e)} className="form-check-input" checked={value === "Second Hand"} />
+          <input
+            id="secondHand"
+            name="productFreshness"
+            data-testid="test-freshness2"
+            type="radio"
+            value="Second Hand"
+            onChange={(e) => handleCheckValue(e)}
+            className="form-check-input"
+            checked={value === "Second Hand"}
+          />
           <label className="form-check-label" htmlFor="secondHand">
             Second Hand
           </label>

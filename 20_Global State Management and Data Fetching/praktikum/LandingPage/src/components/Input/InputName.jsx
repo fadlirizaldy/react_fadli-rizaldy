@@ -10,6 +10,8 @@ const InputName = ({ title, idError, setStateItem, value, stateError }) => {
       <label className="form-label">{title}</label>
       <input
         type="text"
+        id="prodName"
+        aria-label="ProductName"
         className={`form-control ${stateError.isError && (!/^[A-Za-z0-9 ]*$/.test(value) || value.length < 1) ? "border border-danger" : ""}`}
         value={value}
         placeholder=""

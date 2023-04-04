@@ -8,6 +8,7 @@ const FileInput = ({ setFilePath, value, stateError }) => {
       </label>
       <input
         type="file"
+        data-testid="upload-image"
         value={value}
         onChange={({ target }) => setFilePath(target.value)}
         className={`form-control-file border rounded ${stateError.isError && !/\.(gif|jpe?g|tiff?|png|webp|bmp)$/i.test(value) ? "border-danger" : "border-primary"}`}

@@ -9,6 +9,7 @@ const TextAreaInput = ({ setDescription, value, stateError }) => {
       <textarea
         className={`form-control ${stateError.isError && value.length < 1 ? "border border-danger" : ""}`}
         id="productDesc"
+        aria-label="descriptionProd"
         rows="3"
         value={value}
         onChange={({ target }) => setDescription(target.value)}

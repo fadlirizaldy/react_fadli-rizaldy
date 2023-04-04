@@ -1,6 +1,8 @@
+import { v4 as uuidv4 } from "uuid";
+
 export const InitialState = [
   {
-    no: crypto.randomUUID(),
+    no: uuidv4(),
     name: "Xiaomi",
     category: "Handphone",
     image: "c:/graph.jpg",
@@ -9,7 +11,7 @@ export const InitialState = [
     price: "20000",
   },
   {
-    no: crypto.randomUUID(),
+    no: uuidv4(),
     name: "Samsong",
     category: "Laptop",
     image: "c:/topsang.jpg",
