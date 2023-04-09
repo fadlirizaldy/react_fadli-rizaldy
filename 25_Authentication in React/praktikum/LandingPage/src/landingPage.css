@@ -1,0 +1,266 @@
+:root {
+  --darkBlue: #37517e;
+  --blueLighter: #47b2e4;
+  --baseWhite: #ffffff;
+  --ivory: #f3f5fa;
+  --brown: rgba(255, 255, 255, 0.6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+}
+
+/* Nav Bar */
+.logoSimple {
+  padding: 15px 10px;
+}
+
+@media screen and (min-width: 1000px) {
+  .navbarMenu {
+    display: flex !important;
+    justify-content: flex-end !important;
+  }
+}
+
+.navbarMenu > a {
+  color: #0d6efd !important;
+  padding: 12px 15px !important;
+  margin: 0 8px;
+  font-size: 1em;
+}
+.navbarMenu > a:nth-child(1) {
+  color: #ffffff !important;
+}
+
+/* Hero Section */
+.heroSection {
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darkBlue) !important;
+}
+
+#heroImg {
+  width: 636px;
+  height: 527px;
+  margin-left: 25px;
+}
+
+.leftContent > h1 {
+  color: #ffffff;
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.leftContent > .motto {
+  color: var(--brown);
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.buttonCTA {
+  margin-top: 50px;
+}
+
+.buttonCTA > a:nth-child(1) {
+  width: 147.36px;
+  height: 50px;
+  padding: 9px 28px 12px 28px;
+  border-radius: 50px;
+  background-color: var(--blueLighter);
+  font-style: normal;
+  margin-right: 37px;
+}
+
+.buttonCTA > a:nth-child(1):hover {
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.25);
+}
+
+.buttonCTA > a:nth-child(2):hover {
+  text-shadow: 2px 2px 2px var(--ivory);
+}
+
+.newsLetter {
+  height: 239px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ivory);
+}
+
+.newsLetter > h2 {
+  color: var(--darkBlue);
+  font-size: 24px;
+}
+
+.newsLetter > p {
+  color: #444444;
+  font-size: 15px;
+  margin: 20px 0;
+  font-family: "Open Sans";
+}
+
+.subsField > input[type="text"] {
+  width: 530px;
+  height: 42px;
+  border-radius: 50px;
+  border: none;
+}
+
+.subsField > input[type="submit"] {
+  margin-left: -50px;
+  width: 113px;
+  height: 42px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--blueLighter);
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Open Sans" !important;
+}
+
+.subsField > input[type="submit"]:hover {
+  box-shadow: 10px 10px 5px -5px rgba(0, 0, 0, 0.25);
+}
+
+/* Contact Field */
+
+.contact {
+  display: grid;
+  margin: 50px 90px;
+  background-color: #ffffff;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 339.19px;
+}
+
+.contact * {
+  color: #444444;
+}
+
+.contact > .salesContact > h2 {
+  font-size: 28px;
+  color: var(--darkBlue);
+}
+
+.salesContact,
+.linksMenu,
+.serviceMenu,
+.socialNetworks {
+  display: flex;
+  flex-direction: column;
+}
+
+.salesContact > h2 {
+  margin-bottom: 10px;
+}
+
+.linksMenu,
+.serviceMenu {
+  padding-left: 30px;
+  margin-top: 12px;
+}
+
+.linksMenu > *,
+.serviceMenu > * {
+  padding: 15px 0;
+}
+
+.socialNetworks > h2 {
+  margin-bottom: 15px;
+}
+
+.socialNetworks > p {
+  line-height: 23px;
+}
+
+.social-media {
+  display: grid;
+  margin-top: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 7.64px;
+}
+
+.social-media > .circle {
+  width: 36px;
+  height: 36px;
+  background-color: var(--blueLighter);
+  /* border: 1px solid; */
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-sosmed {
+  font-size: 23px;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--darkBlue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 80px 20px 80px;
+  color: #ffffff;
+  text-align: center;
+}
+
+#creator {
+  color: var(--blueLighter);
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1048px) {
+  .heroSection {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .heroSection > .rightContent {
+    margin: 40px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #heroImg {
+    width: 400px;
+    height: 350px;
+  }
+
+  .newsLetter > p {
+    padding: 10px;
+  }
+
+  .subsField > input[type="text"] {
+    width: 300px;
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+    row-gap: 25px;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
+}
